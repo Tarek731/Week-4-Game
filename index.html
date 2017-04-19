@@ -4,9 +4,7 @@
 <head>
     <title>Ruby</title>
     <!-- added link to bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <!-- link to javascript game.js -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    
     <!-- Created viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- added link to CSS Style Page -->
@@ -24,13 +22,14 @@
         background-color: black;
     }
     
-    h3 {font-family: 'Gloria Hallelujah', cursive;
+    h3 {
+        font-family: 'Gloria Hallelujah', cursive;
         color: white;
         text-align: center;
         text-shadow: 3px 2px grey;
         background-color: black;
-        
     }
+    
     .col-sm-4 {
         background-image: url("assets/images/grey_wash_wall.png");
     }
@@ -99,16 +98,18 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                
-<h3>YOU NEED TO EAT <p id="demo"CALORIES</p></h3>
-
+                <h3>YOU NEED TO EAT <span id="demo"></span> CALORIES</h3>
                 <!-- shows total score -->
-                <div class="total"></div>
-           <div id="#numberWins'"></div>
-            <div id="#numberLosses'"></div>
+               <h3><div class="total"></div></h3>
+                <div id="#numberWins'"></div>
+                <div id="#numberLosses'"></div>
             </div>
         </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- link to javascript game.js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>

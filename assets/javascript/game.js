@@ -1,10 +1,15 @@
 $(document).ready(function() {
-
+            var x = document.getElementById("demo");
+			var randomNumber;
+			setRandom();
             // generates random number between 1 and 100
-            function myFunction() {
-                var x = document.getElementById("demo")
-                x.innerHTML = Math.floor((Math.random() * 100) + 1);
+             function setRandom() {
+            	console.log("running setRandom")
+            	randomNumber = Math.floor((Math.random() * 100) + 1);
+                x.innerHTML = randomNumber;
             }
+
+            
 
             var TheTotal = 0;
             var wins = 0;
@@ -19,45 +24,53 @@ $(document).ready(function() {
                 alert("You fat ass");
                 wins++;
                 $('#numberWins').text(wins);
-                
+
             }
             //addes the losses to the userTotal
             function loser() {
-                alert("skinny");
+                alert("skinny ass");
                 losses++;
                 $('#numberLosses').text(losses);
-               
+
             }
 
             //sets win/lose conditions
-            if (userTotal == Random) {
-                win();
-            } else if (userTotal > Random) {
-                loser();
+            function checkTotal(){
+
+	            if (theTotal == randomNumber) {
+	                win();
+	            } else if (theTotal > randomNumber) {
+	                loser();
+	            }
+
             }
 
 
-
+// adds total for buttons pressed in html
             var theTotal = 0;
             $('.btn1').click(function() {
-                theTotal = Number(theTotal) + Number($(.
-                    "btn1").attr("value"));
-                $('.total').text("Total: " + theTotal);
+               console.log("button 1 was cliked");
+                theTotal = Number(theTotal) + Number($(".btn1").attr("value"));
+               checkTotal()
+                $('.total').text("YOU ONLY ATE" + theTotal);
             });
 
             $('.btn2').click(function() {
                 theTotal = Number(theTotal) + Number($(this).val());
-                $('.total').text("Total: " + theTotal);
+                checkTotal()
+                $('.total').text("YOU ONLY ATE" + theTotal);
             });
 
             $('.btn3').click(function() {
                 theTotal = Number(theTotal) + Number($(this).val());
-                $('.total').text("Total: " + theTotal);
+                checkTotal()
+                $('.total').text("YOU ONLY ATE" + theTotal);
             });
 
             $('.btn4').click(function() {
                 theTotal = Number(theTotal) + Number($(this).val());
-                $('.total').text("Total: " + theTotal);
+                checkTotal()
+                $('.total').text("YOU ONLY ATE" + theTotal);
             });
 
             // generates random number between 1 and 100
@@ -68,8 +81,10 @@ $(document).ready(function() {
 
 
             // outside function
-            $('.total').text("Total: " + theTotal);
+            $('.total').text("YOU ONLY ATE " +  theTotal);
 
 
 
-        }
+})
+
+
